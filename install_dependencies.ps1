@@ -9,11 +9,15 @@ if ($envList -match "notelens") {
     Write-Output "Activating notelens environment..."
     conda activate notelens
 }
-# 가상 환경 활성화
-conda activate notelens
 
-# conda 명령어 실행
-conda install paddlepaddle-gpu==2.6.0 cudatoolkit=11.7 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ -c conda-forge -y
-conda install "paddleocr>=2.0.1" -y
-conda install fastapi -y
-conda install "uvicorn[standard]" -y
+# 필요한 패키지 설치
+$requiredPackages = @("paddlepaddle-gpu==2.6.0", "paddleocr>=2.0.1", "fastapi", "uvicorn[standard]")
+foreach ($package in $requiredPackages) {
+    $packageInstalled = conda list | Select-String -Pattern $package
+    if (!$packageInstalled) {
+        Write-Output "$package not installed. Installing..."
+        conda install $package -y
+    } else {
+        Write-Output "$package already installed."
+    }
+}
