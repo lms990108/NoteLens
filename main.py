@@ -1,3 +1,5 @@
+# 실행 명령어 uvicorn main:app --reload
+
 from typing import Union
 
 from fastapi import FastAPI
