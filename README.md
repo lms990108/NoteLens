@@ -1,6 +1,8 @@
 # NoteLens
 단국대학교 캡스톤/졸업 프로젝트 NoteLens
 
+<img src="https://github.com/lms990108/NoteLens/assets/103021300/5a6bc04c-1e1d-4504-aa8e-9644f20e7f0b" height="300"/>
+
 OCR 모델이 들어있는 AI API의 역할을 할 예정
 
 - 해당 api의 메인로직 
@@ -16,3 +18,5 @@ ocr 결과 : JSON출력할 것. 저장은 메인서버에서 받아서 할 것
 1. img 주소를 입력받는 POST요청 필요 (api)
 2. 해당 이미지를 처리해서 문자열 추출 (ai)
 3. 추출된 문자열을 json으로 전송 (api)
+
+
