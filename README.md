@@ -4,7 +4,7 @@
 <img src="https://github.com/lms990108/NoteLens/assets/103021300/5a6bc04c-1e1d-4504-aa8e-9644f20e7f0b" height="300"/>
 
 
-해당 Repostiory는 OCR 모델이 들어있는fastAPI를 관리할 예정
+## 해당 Repostiory는 OCR 모델이 들어있는fastAPI를 관리할 예정
 
 - 해당 api의 메인로직 
 1. img 입력
@@ -22,4 +22,21 @@
 2. 해당 이미지를 처리해서 문자열 추출 (ai)
 3. 추출된 문자열을 json으로 전송 (api)
 
+---
 
+github action을 통해 cicd 를 구성할 예정
+
+- workflow
+
+1. 코드 품질 검사
+    - Lint 검사
+    - Mypy를 통한 타입 검사
+2. 빌드 자동화
+    - 라이브러리 의존성 관리를 위해 pull request 를 실행하면 pip freeze를 통해 requirements.txt 최신화
+3. 스크립트를 통한 편의성 개선
+    - 실행 명령어 (uvicorn main:app --reload)와 
+    라이브러리 동기화 명령어 (pip install -r requirements.txt) 
+    및 추가적인 명령어를 병합한 개발용 스크립트 생성
+4. 배포 자동화
+    3번에서 만든 스크립트를 활용해서 배포 또한 자동화
+5. 실행/에러 로깅
