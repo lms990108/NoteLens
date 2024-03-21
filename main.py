@@ -1,16 +1,9 @@
 # 실행 명령어 uvicorn main:app --reload
-
-from typing import Union
-
+# 포트번호 : 8000번
+# api list : localhost:8000/docs
 from fastapi import FastAPI
+from app.api.router.testRouter import testRouter 
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+app.include_router(testRouter, prefix="/api/test")
