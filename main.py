@@ -7,4 +7,4 @@ from app.api.router import testRouter, imageRouter
 app = FastAPI()
 
 app.include_router(testRouter, prefix="/api/test")
-app.include_router(imageRouter, prefix="/api/img")
+app.include_router(imageRouter, prefix="/api/image")
