@@ -94,6 +94,7 @@ PyMuPDF==1.20.2
 pyparsing==3.1.2
 python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1709299778482/work
 python-docx==1.1.0
+python-multipart==0.0.9
 pytz==2024.1
 PyWavelets==1.4.1
 pywin32==306
