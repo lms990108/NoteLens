@@ -235,3 +235,6 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,python
 
 images
+
+# Ignore jpg files in the test/resources directory
+app/api/test/resources/*.jpg
