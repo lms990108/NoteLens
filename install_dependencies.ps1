@@ -15,3 +15,4 @@ conda install paddlepaddle-gpu==2.6.0 cudatoolkit=11.7 -c https://mirrors.tuna.t
 conda install "paddleocr>=2.0.1" -y
 conda install fastapi -y
 conda install "uvicorn[standard]" -y
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
