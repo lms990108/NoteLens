@@ -11,8 +11,8 @@ if ($envList -match "notelens") {
 }
 
 # conda 명령어 실행
-conda install paddlepaddle-gpu==2.6.0 cudatoolkit=11.7 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ -c conda-forge -y
-conda install "paddleocr>=2.0.1" -y
+conda install paddlepaddle==2.6.1 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ # cpu 버전
+pip install "paddleocr>=2.0.1"
 conda install fastapi -y
 conda install "uvicorn[standard]" -y
-conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 cpuonly -c pytorch # cpu 버전
