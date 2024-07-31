@@ -5,5 +5,6 @@
 
 
 - Main Server : https://github.com/lms990108/NoteLens_Server
+- APP : https://github.com/lms990108/NoteLens_APP
 - OCR API : https://github.com/lms990108/NoteLens_OCR
 - YOLO API : https://github.com/lms990108/NoteLens_YOLO
